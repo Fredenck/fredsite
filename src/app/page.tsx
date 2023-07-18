@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import Navbar, { Navigation } from './Navigation'
  
 export const metadata: Metadata = {
   title: 'Homepage',
