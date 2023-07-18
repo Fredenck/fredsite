@@ -28,9 +28,9 @@ export function Navigation({ navLinks }:{navLinks:any}) {
 export default function Navbar() {
     return (
         // {Navigation({})}
-        <ul className='flex flex-row items-center mx-auto p-5'>
+        <nav className='flex flex-row items-center mx-auto p-5'>
             <Link href="/" className="mr-5">Home</Link>
             <Link href="/blog" className="mr-5">Blog</Link>
-        </ul>
+        </nav>
     )
 }
