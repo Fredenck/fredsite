@@ -20,3 +20,10 @@ body {
   color: rgb(var(--foreground-rgb));
   background: var(--background-start-rgb);
 }
+
+/* This will apply underline to all links, including navbar */
+/* @layer base {
+  a {
+     @apply underline;
+  }
+} */

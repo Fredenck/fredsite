@@ -31,7 +31,6 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
 
   return (
-    // <article className="pt-8 px-96">
     <article className="px-96 pt-8 pb-24">
       <div className="mb-8">
         <h1 className="text-3xl font-bold">{post.title}</h1>
@@ -39,13 +38,15 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
         {post.description && (
-          <p className="text-xs mt-0 text-slate-700">
+          <p className="text-xs">
             {post.description}
           </p>
         )}
         <hr className="my-4" />
       </div>
-      <Mdx code={post.body.code} ></Mdx>
+      <div className='font-serif'>
+        <Mdx code={post.body.code} ></Mdx>
+      </div>
       {/* <p className='font-serif'>{post.body.raw}</p> */}
       {/* <div className="[&>*]:mb-3 [&>*:last-child]:mb-0 font-serif" dangerouslySetInnerHTML={{ __html: post.body.raw }} /> */}
     </article>
