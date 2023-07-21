@@ -18,6 +18,7 @@ async function getPostFromParams(params: { slug: string } ) {
   return post
 }
 
+// generates pages on build time
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
