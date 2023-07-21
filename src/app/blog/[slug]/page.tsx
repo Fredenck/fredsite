@@ -31,7 +31,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
 
   return (
-    <article className="px-96 pt-8 pb-24">
+    <article className="px-72 pt-8 pb-24">
       <div className="mb-8">
         <h1 className="text-3xl font-bold">{post.title}</h1>
         <time dateTime={post.date} className="text-xs mb-1 text-gray-600">

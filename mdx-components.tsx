@@ -7,7 +7,10 @@ import Link from 'next/link'
 const mdxComponents: MDXComponents = {
     // Override the default <a> element to use the next/link component.
     a: ({ href, children }) => <Link className="underline" href={href as string}>{children}</Link>,
-    // a: ({ href, children }) => <a className="underline" href={href as string}>{children}</a>,
+    img: ({ src, children }) => <img className="justify-center w-1/2 object-scale-down rounded-lg" src={src as string}>{children}</img>,
+    h1: (props) => <h1 className="text-2xl" {...props} />,
+    h2: (props) => <h2 className="text-xl" {...props} />,
+    h3: (props) => <h3 className="text-lg" {...props} />,
     // Add a custom component.
     MyComponent: () => <div>Hello World!</div>,
   }

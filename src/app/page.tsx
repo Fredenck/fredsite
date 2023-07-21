@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className='text-lg font-bold'>Hey, it's Fred</h1>
         <br></br>
         <p className='text-sm' font-bold>This is the fredsite</p>
-        <br></br>
+        <hr className="my-4" />
         <br></br>
         <p className='text-sm'>I have good eyes</p>
         <p className='text-sm'>but need contacts</p>
@@ -25,6 +25,13 @@ export default function Home() {
       </div>
       
       <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" />
+
+      {/* <div className='flex flex-row justify-center'>
+          <img src="/snowy-view.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
+          <img src="/deer.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
+          <img src="/snowy.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
+      </div> */}
+
     </main>
   )
 }
