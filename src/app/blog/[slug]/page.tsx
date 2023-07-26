@@ -3,6 +3,18 @@ import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import { Mdx } from "mdx-components"
 
+/*
+I've tried using next/mdx: https://nextjs.org/docs/app/building-your-application/configuring/mdx
+However, next/mdx doesn't support parsing frontmatter, so I'd have to use the gray-matter package.
+
+I think I still overall like contentlayer because you can define the metadata and files parsed.
+Plus, I struggled getting a static site with next/mdx and my /blog/[slug]/page.tsx required:
+
+λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
+
+In contrast, contentlayer does all of this at build time, creating a JSON which is quite nice.
+ */
+
 // export const metadata: Metadata = {
 //   title: 'Blog',
 //   description: 'My thoughts, interests, and more',
