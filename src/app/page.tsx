@@ -12,7 +12,7 @@ export default function Home() {
         <h1 className='text-lg font-bold'>Hey, it's Fred</h1>
         <br></br>
         <p className='text-sm' font-bold>This is the fredsite</p>
-        <hr className="my-4" />
+        <hr className="my-4 w-4/6" />
         <br></br>
         <p className='text-sm'>I have good eyes</p>
         <p className='text-sm'>but need contacts</p>
