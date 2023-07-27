@@ -20,16 +20,6 @@ In contrast, contentlayer does all of this at build time, creating a JSON which 
 //   description: 'My thoughts, interests, and more',
 // };
 
-async function getPostFromParams(params: { slug: string } ) {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
-
-  if (!post) {
-    null
-  }
-
-  return post
-}
-
 // generates pages on build time
 export const generateStaticParams = async () => allPosts.map((post) => ({ slug: post._raw.flattenedPath }))
 
