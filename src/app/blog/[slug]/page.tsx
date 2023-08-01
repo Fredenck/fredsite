@@ -47,11 +47,9 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         )}
         <hr className="my-4" />
       </div>
-      <div className='font-serif'>
+      <div className='font-serif text-base'>
         <Mdx code={post.body.code} ></Mdx>
       </div>
-      {/* <p className='font-serif'>{post.body.raw}</p> */}
-      {/* <div className="[&>*]:mb-3 [&>*:last-child]:mb-0 font-serif" dangerouslySetInnerHTML={{ __html: post.body.raw }} /> */}
     </article>
   )
 }
