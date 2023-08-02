@@ -14,14 +14,14 @@ function PostCard(post: Post) {
     <div className='w-full'>
       <Link 
       href={post.url}
-      className='block !w-full py-4 mb-1 w-max rounded-lg hover:bg-slate-100'>
+      className='block !w-full p-4 mb-1 w-max rounded-lg hover:bg-slate-200/50'>
         <h2 className="mb-1 text-l">
           {post.title}
         </h2>
-        <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
+        <time dateTime={post.date} className="mb-2 block text-xs text-slate-500">
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
-        <p className='text-sm'>{post.description}</p>
+        <p className='text-sm text-slate-500'>{post.description}</p>
         {/* <div className="text-sm" dangerouslySetInnerHTML={{ __html: post.description}} /> */}
       </Link>
     </div>
