@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
 import { Mdx } from "mdx-components"
+import { notFound } from 'next/navigation'
 
 /*
 I've tried using next/mdx: https://nextjs.org/docs/app/building-your-application/configuring/mdx
@@ -31,7 +32,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
+  if (!post) notFound()
 
   return (
     <article className="px-72 pt-8 pb-24">
