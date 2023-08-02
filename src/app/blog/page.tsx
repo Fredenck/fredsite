@@ -14,7 +14,7 @@ function PostCard(post: Post) {
     <div className='w-full'>
       <Link 
       href={post.url}
-      className='block !w-full p-4 mb-1 w-max rounded-lg hover:bg-slate-100'>
+      className='block !w-full py-4 mb-1 w-max rounded-lg hover:bg-slate-100'>
         <h2 className="mb-1 text-l">
           {post.title}
         </h2>
