@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { format, parseISO } from 'date-fns'
 import { allPosts } from 'contentlayer/generated'
-import { Mdx } from "mdx-components"
+import { Mdx } from "app/mdx-components"
 import { notFound } from 'next/navigation'
 
 /*
