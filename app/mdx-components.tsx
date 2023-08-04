@@ -6,16 +6,15 @@ import { twMerge } from 'tailwind-merge'
 import { ClassValue, clsx } from "clsx"
 
 // @ts-ignore
+// TODO: React Hydration Error
 function RImage(props) {
   return (
-    <div className="flex justify-center m-4">
-      <Image
+    <div className="flex justify-center">
+      <img
       alt={props.alt || "Image"}
-      className='rounded-lg'
-      width={500}
-      height={500}
+      className='rounded-lg w-4/6'
       {...props}
-      />
+      ></img>
     </div>
   )
 }
@@ -29,11 +28,11 @@ function RoundedImage(props) {
 const mdxComponents: MDXComponents = {
     // Override the default <a> element to use the next/link component.
     a: ({ href, children }) => <Link className="underline" href={href as string}>{children}</Link>,
-    // img: ({ src, children }) => <img className="w-1/3 rounded-lg" src={src as string}>{children}</img>,
+    img: ({ src, children }) => <img className="w-4/6 mx-auto rounded-lg" src={src as string}>{children}</img>,
     // img: (props) => <Image {...props} layout="responsive" loading="lazy" width={300} height={300}/>,
     // img: Image,
     // img: RImage,
-    img: RoundedImage,
+    // img: RoundedImage,
     // img: ({ src, children }) => <div className="flex justify-center"><Image className="rounded-lg" alt="alt" src={src as string} width={500} height={500}>{children}</Image></div>,
     h1: (props) => <h1 className="text-2xl" {...props} />,
     h2: (props) => <h2 className="text-xl" {...props} />,

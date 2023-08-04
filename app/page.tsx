@@ -1,5 +1,7 @@
 import { Metadata } from 'next'
- 
+import pfp from '../public/aloha.jpg' 
+import Image from 'next/image'
+
 export const metadata: Metadata = {
   title: 'Homepage',
 }
@@ -24,7 +26,20 @@ export default function Home() {
         <p className='text-sm'></p>
       </div>
       
-      <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" />
+      {/* <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" /> */}
+      <Image
+        alt="Aloha"
+        className='rounded-lg'
+        // Importing an image will
+        // automatically set the width and height
+        src={pfp}
+        sizes="100vw"
+        // Make the image display full width
+        style={{
+          height: '100%',
+          width: 'auto',
+        }}
+      />
 
       {/* <div className='flex flex-row justify-center'>
           <img src="/snowy-view.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
