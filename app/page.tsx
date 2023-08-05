@@ -9,21 +9,19 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     // p-24, h-[...] because h-screen conflcits with navbar height and leads to whitespace at the bottom
-    <main className="flex flex-row justify-center h-[calc(100vh-64px)] p-24">
-      <div className="w-full font-mono basis-4/6 pl-12">
+    <main className="flex flex-row justify-around h-[calc(100vh-64px)] p-24">
+      <div className="w-full font-mono basis-2/6">
         <h1 className='text-lg font-bold'>Hey, it's Fred</h1>
         <br></br>
         <p className='text-sm' font-bold>This is the fredsite</p>
         <hr className="my-4 w-4/6" />
         <br></br>
-        <p className='text-sm'>I have good eyes</p>
-        <p className='text-sm'>but need contacts</p>
+        <p className='text-sm'>I'm a current UCLA sophomore studying computer science.</p>
         <br></br>
-        <p className='text-sm'>I am introvert</p>
-        <p className='text-sm'>but extroverted</p>
+        <p className='text-sm'>I see programming as a tool and computer science as the area of study to solve problems with this tool.</p>
         <br></br>
-        <p className='text-sm'>I make good decisions</p>
-        <p className='text-sm'></p>
+        <p className='text-sm'>Currently, I have a lot of interests. Probably too many. 
+        That's probably why I like computer science; it's a field applicable to anything</p>
       </div>
       
       {/* <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" /> */}
@@ -33,7 +31,7 @@ export default function Home() {
         // Importing an image will
         // automatically set the width and height
         src={pfp}
-        sizes="100vw"
+        sizes="150vw"
         // Make the image display full width
         style={{
           height: '100%',
