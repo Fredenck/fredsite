@@ -21,7 +21,7 @@ export default function Home() {
         <p className='text-sm'>I see programming as a tool and computer science as the area of study to solve problems with this tool.</p>
         <br></br>
         <p className='text-sm'>Currently, I have a lot of interests. Probably too many. 
-        That's probably why I like computer science; it's a field applicable to anything</p>
+        That's probably why I like computer science; it's applicable to anything</p>
       </div>
       
       {/* <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" /> */}
