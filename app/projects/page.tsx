@@ -55,10 +55,24 @@ function ProjectCard(project: Project) {
 export default async function ProjectPage() {
   return (
     <div className="py-8 px-36 font-sans">
-      <div className="">
-        <h1 className='text-2xl text-center font-bold'>Projects</h1>
+      <div className="text-center ">
+        <h1 className='text-2xl font-bold'>Projects</h1>
+        <p>Random stuff I've done; hover for some details!</p>
       </div>
       <div className='grid grid-cols-3 gap-4 justify-between'>
+        <ProjectCard
+            title={'Walk with Me: Computer Vision on the White Cane'} 
+            description={'Utilizing computer vision on a white cane, \
+            the user is notified of incoming obstacles from the \
+            left, front, and right with 96% accuracy via tactile input (vibration motors).\
+            Walk with Me is a smart cane 1/10th of the market price costing about $61.\
+            My team placed first in "Robotics and Intelligent Machines" in the \
+            Alameda County Science and Engineering Fair qualified for the \
+            California State Fair. We also received the Chevron Innocation Award.'} 
+            languages={['Python', 'OpenCV', 'YOLOv3', 'Raspberry Pi']} 
+            img={'/acsef.png'}
+            path={'https://github.com/Fredenck/acsef2021#readme'}
+          />
         <ProjectCard 
             title={'Google Drive Submission Validation'} 
             description={'During the pandemic, the class I was a TA for \
@@ -72,18 +86,27 @@ export default async function ProjectPage() {
             img={'/juniorTA.png'}
             path={'https://github.com/Fredenck/juniorTA#readme'}
           />
-
-        <ProjectCard
-            title={'Walk with Me: Computer Vision on the White Cane'} 
-            description={'Utilizing computer vision on a white cane, \
-            the user is notified of incoming obstacles from the \
-            left, front, and right with 96% accuracy via tactile input (vibration motors).\
-            Walk with Me is a smart cane 1/10th of the market price costing about $61.'} 
-            languages={['Python', 'OpenCV', 'YOLOv3', 'Raspberry Pi']} 
-            img={'/acsef.png'}
-            path={'https://github.com/Fredenck/acsef2021#readme'}
-          />
-
+          <ProjectCard 
+              title={'Retina and Finger Vein Classification'} 
+              description={'Finger veins are unique to the individual and provide more security than finger prints\
+              As a research intern for Prof Wenyao Xu at SUNY UBuffalo,\
+              I investigated the applications of finger veins in the Internet or Things.\
+              I programmed a Local Linear Binary Pattern approach to extract such veins\
+              and fed this into a variety of common ML models. Also applied similar techniques on\
+              retina veins and medical CT scans of the chest to classify pneumonia.'} 
+              languages={['Python', 'Feature Extraction', 'Machine Learning']} 
+              img={'/wenyao.png'}
+              path={'https://github.com/Fredenck/IoT-Intern/tree/main#readme'}
+            />
+            <ProjectCard
+                title={'Personal Website'} 
+                description={'Modern web-development with Next.js 13\'s App Router and TailwindCSS.\
+                Using Contentlayer ^0.3.4 (beta) to parse MDX and frontmatter (YAML) into JSON during build time\
+                yielding statically generated pages with dynamic routes.'} 
+                languages={['Next.js 13', 'Tailwind', 'Contentlayer']} 
+                img={'/website.png'}
+                path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
+              />
         <ProjectCard
             title={'Analyzing SARS-CoV-2 Antbodies'} 
             description={'As a part of the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
