@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     // p-24, h-[...] because h-screen conflcits with navbar height and leads to whitespace at the bottom
-    <main className="flex flex-row justify-around h-[calc(100vh-64px)] p-24">
+    <main className="flex flex-col md:flex-row lg:flex-row md:justify-around lg:justify-around h-[calc(100vh-64px)] p-12 md:p-16 lg:p-24">
       <div className="w-full font-mono basis-2/6">
         <h1 className='text-lg font-bold'>Hey, it's Fred</h1>
         <br></br>
@@ -27,11 +27,10 @@ export default function Home() {
       {/* <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" /> */}
       <Image
         alt="Aloha"
-        className='rounded-lg'
+        className='rounded-lg object-scale-down pt-12 md:pt-0 lg:pt-0'
         // Importing an image will
         // automatically set the width and height
         src={pfp}
-        sizes="150vw"
         // Make the image display full width
         style={{
           height: '100%',

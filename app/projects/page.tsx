@@ -20,7 +20,7 @@ type Project = {
 function ProjectCard(project: Project) {
   return (
     <div className='shadow-lg p-6 rounded-xl'>
-        <div className="group relative block w-full h-4/6 bg-slate-200">
+        <div className="group relative block w-full bg-slate-200">
             <img src={project.img} 
                 className="absolute object-cover w-full h-full rounded-lg group-hover:opacity-10" 
                 alt="project img">
@@ -54,12 +54,12 @@ function ProjectCard(project: Project) {
 
 export default async function ProjectPage() {
   return (
-    <div className="py-8 px-36 font-sans">
+    <div className="py-8 px-4 md:px-24 lg:px-36 font-sans">
       <div className="text-center ">
         <h1 className='text-2xl font-bold'>Projects</h1>
         <p>Random stuff I've done; hover for some details!</p>
       </div>
-      <div className='grid grid-cols-3 gap-4 justify-between'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
         <ProjectCard
             title={'Walk with Me: Computer Vision on the White Cane'} 
             description={'Utilizing computer vision on a white cane, \
@@ -108,15 +108,25 @@ export default async function ProjectPage() {
                 path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
               />
         <ProjectCard
-            title={'Analyzing SARS-CoV-2 Antbodies'} 
-            description={'As a part of the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
-            I researched how our body\'s IgG and IgM antibodies are effected by SARS-CoV-2 (Covid-19).\
-            My job was to create visualizations, which can be found in my GitHub. \
-            On the side, I also explored the Shiny package and created a basic interactive visualization website'} 
-            languages={['R', 'Data Visualization']} 
-            img={'/erevna.jpg'}
-            path={'https://github.com/Fredenck/Analyzing-Data-of-SARS-CoV-2-Serology-Antibody-IgG-Tests/tree/master#readme'}
+            title={'Accelerating Machine Learning'} 
+            description={'Worked under Khanh Nguyen to develop and test his patent\
+            :Tuning and Accelerating Machine Learning using Unmixed Second Order Derivatives.\
+            Created convolutional neural networks and applied a custom backpropogation method to \
+            accelerate convergence.'} 
+            languages={['Pytorch', 'Machine Learning']} 
+            img={'/petanano.png'}
+            path={''}
           />
+          <ProjectCard
+              title={'Analyzing SARS-CoV-2 Antbodies'} 
+              description={'As a part of the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
+              I researched how our body\'s IgG and IgM antibodies are effected by SARS-CoV-2 (Covid-19).\
+              My job was to create visualizations, which can be found in my GitHub. \
+              On the side, I also explored the Shiny package and created a basic interactive visualization website'} 
+              languages={['R', 'Data Visualization']} 
+              img={'/erevna.jpg'}
+              path={'https://github.com/Fredenck/Analyzing-Data-of-SARS-CoV-2-Serology-Antibody-IgG-Tests/tree/master#readme'}
+            />
         <ProjectCard
             title={'Escape the Volcano'} 
             description={'Navigate a 3rd person controller to escape the \
