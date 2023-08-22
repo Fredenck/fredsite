@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react'
 //   description: 'My thoughts, interests, and more',
 // };
 
-function PostCard(post: Post) {
+const PostCard = (post: Post) => {
   return (
     <div className='w-full'>
       <Link 
@@ -32,8 +32,7 @@ function PostCard(post: Post) {
 }
 
 // 08/22: to store posts in a state as a client component and remove async
-// TODO: change to a = () => {} arrow function and export default at bottom
-export default function BlogPage() {
+const BlogPage = () => {
   const [category, setCategory] = useState('all')
 
   const posts = allPosts.sort((a:Post, b:Post) => compareDesc(new Date(a.date), new Date(b.date)))
@@ -67,3 +66,5 @@ export default function BlogPage() {
     </div>
   )
 }
+
+export default BlogPage

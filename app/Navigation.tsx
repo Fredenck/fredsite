@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
-export default function Navbar() {
+export const Navbar = () => {
     return (
       // <nav className='flex flex-row justify-end pr-64 py-5 font-mono'>
       <nav className='flex flex-row justify-center py-5 font-mono'>

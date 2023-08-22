@@ -7,7 +7,7 @@ import { ClassValue, clsx } from "clsx"
 
 // @ts-ignore
 // TODO: React Hydration Error
-function RImage(props) {
+const RImage = (props) => {
   return (
     <div className="flex justify-center">
       <img
@@ -20,7 +20,7 @@ function RImage(props) {
 }
 
 // @ts-ignore
-function RoundedImage(props) {
+const RoundedImage = (props) => {
   return <Image alt={props.alt} className="rounded-lg" {...props} />;
 }
 
@@ -49,7 +49,7 @@ const mdxComponents: MDXComponents = {
 // "code": "var Component=(()=>{var ur=Object.create;var I=Object.defineProperty;var 
 // lr=Object.getOwnPropertyDescriptor;var fr=Object.getOwnPropertyNames;var 
 // cr=Object.getPrototypeOf,dr=Object.prototype.hasOwnProperty;var G=(l,a)=>()=>(a||l((a={exports:..."
-export function Mdx({ code }: {code: string}) {
+export const Mdx = ({ code }: {code: string}) => {
   const Component = useMDXComponent(code)
 
   return (

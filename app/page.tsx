@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Homepage',
 }
 
-export default function Home() {
+const Home = () => {
   return (
     // p-24, h-[...] because h-screen conflcits with navbar height and leads to whitespace at the bottom
     <main className="flex flex-col md:flex-row lg:flex-row md:justify-around lg:justify-around h-[calc(100vh-64px)] p-12 md:p-16 lg:p-24">
@@ -47,3 +47,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home

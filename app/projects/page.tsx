@@ -17,7 +17,7 @@ type Project = {
 }
 
 // inspired by https://www.geeksforgeeks.org/how-to-display-text-on-hover-over-image-using-tailwind-css-in-react-js/
-function ProjectCard(project: Project) {
+export const ProjectCard = (project: Project) => {
   return (
     <div className='shadow-lg p-6 rounded-xl'>
         <div className="group relative block w-full bg-slate-200">
