@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   description: 'Frederick\'s website',
 }
 
-export default function RootLayout({
+const RootLayout = ({
   children,
 }: {
   children: React.ReactNode
-}) {
+}) => {
   return (
     <html lang="en">
       <body className='bg-slate-50'>
@@ -24,3 +24,5 @@ export default function RootLayout({
     </html>
   )
 }
+
+export default RootLayout

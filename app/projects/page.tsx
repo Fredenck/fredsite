@@ -52,7 +52,7 @@ export const ProjectCard = (project: Project) => {
   )
 }
 
-export default async function ProjectPage() {
+const ProjectPage = async() => {
   return (
     <div className="py-8 px-4 md:px-24 lg:px-36 font-sans">
       <div className="text-center ">
@@ -143,3 +143,5 @@ export default async function ProjectPage() {
     </div>
   )
 }
+
+export default ProjectPage
