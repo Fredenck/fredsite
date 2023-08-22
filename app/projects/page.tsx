@@ -75,25 +75,25 @@ export default async function ProjectPage() {
           />
         <ProjectCard 
             title={'Google Drive Submission Validation'} 
-            description={'During the pandemic, the class I was a TA for \
-            submitted homework through Google Classroom. \
-            I was to grade on completeness and validate submissions against empty/unrelated files.\
-            I used Google API to match the submission folder and each of the 144 students, \
+            description={'As a TA during the pandemic, I was to grade on completeness\
+             and validate submissions against empty/unrelated files in Google Drive.\
+            I used Google API to identify the 144 students, \
             leading to a 400% increase in efficiency and 100% accuracy.\
-            Because this checked the owner of the file through Drive, \
-            I also bypassed unnamed files (where I would need to chase down the student)'} 
+            I bypassed unnamed files (where I would need to chase down the student)\
+            by directly examining metadata of each submission.'} 
             languages={['Node.js', 'Google Drive API']} 
             img={'/juniorTA.png'}
             path={'https://github.com/Fredenck/juniorTA#readme'}
           />
           <ProjectCard 
               title={'Retina and Finger Vein Classification'} 
-              description={'Finger veins are unique to the individual and provide more security than finger prints\
+              description={'Finger veins are unique to the individual\
+              and provide more security than finger prints\
               As a research intern for Prof Wenyao Xu at SUNY UBuffalo,\
-              I investigated the applications of finger veins in the Internet or Things.\
-              I programmed a Local Linear Binary Pattern approach to extract such veins\
-              and fed this into a variety of common ML models. Also applied similar techniques on\
-              retina veins and medical CT scans of the chest to classify pneumonia.'} 
+              I created a custom Local Linear Binary Pattern approach to\
+              extract such veins and fed this into a variety of common ML\
+              models. I applied similar techniques on retina veins and CT \
+              scans of the chest to classify pneumonia.'} 
               languages={['Python', 'Feature Extraction', 'Machine Learning']} 
               img={'/wenyao.png'}
               path={'https://github.com/Fredenck/IoT-Intern/tree/main#readme'}
@@ -109,19 +109,20 @@ export default async function ProjectPage() {
               />
         <ProjectCard
             title={'Accelerating Machine Learning'} 
-            description={'Worked under Khanh Nguyen to develop and test his patent\
-            :Tuning and Accelerating Machine Learning using Unmixed Second Order Derivatives.\
+            description={'Develop and test various approved US patentes under Khanh Nguyen.\
+            1) Tuning and Accelerating Machine Learning using Unmixed Second Order Derivatives:\
             Created convolutional neural networks and applied a custom backpropogation method to \
-            accelerate convergence.'} 
+            accelerate convergence.\
+            2) Method and Apparatus for Controlling Robots Arms Using Elastic Distortion Simulations:\
+            customize U2D2 motors with machine learning to achieve inverse kinematics.'} 
             languages={['Pytorch', 'Machine Learning']} 
             img={'/petanano.png'}
             path={''}
           />
           <ProjectCard
               title={'Analyzing SARS-CoV-2 Antbodies'} 
-              description={'As a part of the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
-              I researched how our body\'s IgG and IgM antibodies are effected by SARS-CoV-2 (Covid-19).\
-              My job was to create visualizations, which can be found in my GitHub. \
+              description={'In the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
+              I created visualizations for IgG and IgM antibodies of patients with SARS-CoV-2 (Covid-19).\
               On the side, I also explored the Shiny package and created a basic interactive visualization website'} 
               languages={['R', 'Data Visualization']} 
               img={'/erevna.jpg'}
@@ -135,7 +136,7 @@ export default async function ProjectPage() {
             UCR Extension: Game Design with Ronald Bourbeau!'} 
             languages={['Unity', 'C#']} 
             img={'/escape-the-volcano.png'}
-            path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
+            path={'https://github.com/Fredenck/fredsite'}
           />
 
       </div>
