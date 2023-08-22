@@ -21,6 +21,11 @@ const Post = defineDocumentType(() => ({
         type: 'string',
         description: 'summary of the post',
         required: true,
+    },
+    category: {
+      type: 'string',
+      description: 'category of the post',
+      required: true,
     }
   },
   computedFields: {

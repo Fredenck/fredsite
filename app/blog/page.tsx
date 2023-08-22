@@ -1,13 +1,16 @@
+'use client'
+
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import fs from 'fs'
 import { compareDesc, format, parseISO } from 'date-fns'
 import { allPosts, Post } from 'contentlayer/generated'
+import { useEffect, useState } from 'react'
  
-export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'My thoughts, interests, and more',
-};
+// export const metadata: Metadata = {
+//   title: 'Blog',
+//   description: 'My thoughts, interests, and more',
+// };
 
 function PostCard(post: Post) {
   return (
@@ -28,16 +31,37 @@ function PostCard(post: Post) {
   )
 }
 
-export default async function BlogPage() {
-  const posts = allPosts.sort((a:any, b:any) => compareDesc(new Date(a.date), new Date(b.date)))
+// 08/22: to store posts in a state as a client component and remove async
+// TODO: change to a = () => {} arrow function and export default at bottom
+export default function BlogPage() {
+  const [category, setCategory] = useState('all')
+
+  const posts = allPosts.sort((a:Post, b:Post) => compareDesc(new Date(a.date), new Date(b.date)))
+
+  // each post's category field: 'memories, all' 'all' 'thoughts, all' ...
+  // first attempt: const categories = posts.map((post, idx) => post.category.split(','))
+  const categories = [...new Set(posts.flatMap(({ category }) => category.split(',')))].sort()
+
   return (
     <div className="py-8 px-16 md:px-48 lg:px-96 font-sans">
-      <div className="mb-8">
+      <div className="mb-4">
         <h1 className='text-2xl font-bold'>Blog</h1>
       </div>
+
+      <div>
+        {/* onClick() => change category state */}
+        {categories.map((category, idx) => 
+        // <button className='p-2' key={idx} onClick={() => handleClick(posts, category)}>
+        <button className='p-4' key={idx} onClick={() => setCategory(category)}>
+          {category}
+        </button>)
+        }
+      </div>
+
       <div className=''>
         {posts.map((post, idx) => (
-          <PostCard key={idx} {...post} />
+          // post.category === 'all' && conditional rendering
+          post.category.includes(category) && <PostCard key={idx} {...post} />
         ))}
       </div>
     </div>
