@@ -36,7 +36,6 @@ const Home = () => {
         }}
         // Core Web Vitals: disable lazy loading for LCP
         priority={true}
-        layout="responsive"
       />
 
     </main>
