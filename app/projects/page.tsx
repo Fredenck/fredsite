@@ -1,7 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import fs from 'fs'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
+
+import acsef from '../../public/acsef.png'
+import juniorTA from '../../public/juniorTA.png'
+import wenyao from '../../public/wenyao.png'
+import website from '../../public/website.png'
+import petanano from '../../public/petanano.png'
+import erevna from '../../public/erevna.jpg'
+import volcano from '../../public/escape-the-volcano.png'
  
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -12,7 +20,7 @@ type Project = {
     title: string,
     description: string,
     languages: string[],
-    img: string,
+    img: StaticImageData,
     path: string,
 }
 
@@ -21,10 +29,10 @@ const ProjectCard = (project: Project) => {
   return (
     <div className='shadow-lg p-6 rounded-xl'>
         <div className="group relative block w-full bg-slate-200">
-            <img src={project.img} 
+            <Image src={project.img} 
                 className="absolute object-cover w-full h-full rounded-lg group-hover:opacity-10" 
                 alt="project img">
-            </img>
+            </Image>
             <div className="p-4 flex text-center w-full h-full items-center">
                             {/* Hidden content */}
                             <div className="transition-all transform
@@ -70,7 +78,7 @@ const ProjectPage = async() => {
             Alameda County Science and Engineering Fair qualified for the \
             California State Fair. We also received the Chevron Innocation Award.'} 
             languages={['Python', 'OpenCV', 'YOLOv3', 'Raspberry Pi']} 
-            img={'/acsef.png'}
+            img={acsef}
             path={'https://github.com/Fredenck/acsef2021#readme'}
           />
         <ProjectCard 
@@ -82,7 +90,7 @@ const ProjectPage = async() => {
             I bypassed unnamed files (where I would need to chase down the student)\
             by directly examining metadata of each submission.'} 
             languages={['Node.js', 'Google Drive API']} 
-            img={'/juniorTA.png'}
+            img={juniorTA}
             path={'https://github.com/Fredenck/juniorTA#readme'}
           />
           <ProjectCard 
@@ -95,19 +103,19 @@ const ProjectPage = async() => {
               models. I applied similar techniques on retina veins and CT \
               scans of the chest to classify pneumonia.'} 
               languages={['Python', 'Feature Extraction', 'Machine Learning']} 
-              img={'/wenyao.png'}
+              img={wenyao}
               path={'https://github.com/Fredenck/IoT-Intern/tree/main#readme'}
             />
-            <ProjectCard
-                title={'Personal Website'} 
-                description={'Modern web-development with Next.js 13\'s App Router and TailwindCSS.\
-                Using Contentlayer ^0.3.4 (beta) to parse MDX and frontmatter (YAML) into JSON during build time\
-                yielding statically generated pages with dynamic routes.'} 
-                languages={['Next.js 13', 'Tailwind', 'Contentlayer']} 
-                img={'/website.png'}
-                path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
-              />
-        <ProjectCard
+          <ProjectCard
+              title={'Personal Website'} 
+              description={'Modern web-development with Next.js 13\'s App Router and TailwindCSS.\
+              Using Contentlayer ^0.3.4 (beta) to parse MDX and frontmatter (YAML) into JSON during build time\
+              yielding statically generated pages with dynamic routes.'} 
+              languages={['Next.js 13', 'Tailwind', 'Contentlayer']} 
+              img={website}
+              path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
+            />
+          <ProjectCard
             title={'Accelerating Machine Learning'} 
             description={'Develop and test various approved US patentes under Khanh Nguyen.\
             1) Tuning and Accelerating Machine Learning using Unmixed Second Order Derivatives:\
@@ -116,28 +124,28 @@ const ProjectPage = async() => {
             2) Method and Apparatus for Controlling Robots Arms Using Elastic Distortion Simulations:\
             customize U2D2 motors with machine learning to achieve inverse kinematics.'} 
             languages={['Pytorch', 'Machine Learning']} 
-            img={'/petanano.png'}
+            img={petanano}
             path={''}
-          />
+            />
           <ProjectCard
               title={'Analyzing SARS-CoV-2 Antbodies'} 
               description={'In the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
               I created visualizations for IgG and IgM antibodies of patients with SARS-CoV-2 (Covid-19).\
               On the side, I also explored the Shiny package and created a basic interactive visualization website'} 
               languages={['R', 'Data Visualization']} 
-              img={'/erevna.jpg'}
+              img={erevna}
               path={'https://github.com/Fredenck/Analyzing-Data-of-SARS-CoV-2-Serology-Antibody-IgG-Tests/tree/master#readme'}
             />
-        <ProjectCard
-            title={'Escape the Volcano'} 
-            description={'Navigate a 3rd person controller to escape the \
-            crater of a volcano. Comes with guns, falling rocks, \
-            teleporters, lava, two types of enemies. Created with Unity 3D and C# in \
-            UCR Extension: Game Design with Ronald Bourbeau!'} 
-            languages={['Unity', 'C#']} 
-            img={'/escape-the-volcano.png'}
-            path={'https://github.com/Fredenck/fredsite'}
-          />
+          <ProjectCard
+              title={'Escape the Volcano'} 
+              description={'Navigate a 3rd person controller to escape the \
+              crater of a volcano. Comes with guns, falling rocks, \
+              teleporters, lava, two types of enemies. Created with Unity 3D and C# in \
+              UCR Extension: Game Design with Ronald Bourbeau!'} 
+              languages={['Unity', 'C#']} 
+              img={volcano}
+              path={'https://github.com/Fredenck/fredsite'}
+            />
 
       </div>
     </div>
