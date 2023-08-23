@@ -14,6 +14,7 @@ Plus, I struggled getting a static site with next/mdx and my /blog/[slug]/page.t
 λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
 
 In contrast, contentlayer does all of this at build time, creating a JSON which is quite nice.
+Currently have Static Site Generation (SSG) for most pages and Server-Side Rendering (SSR) for dynamic blog pages
  */
 
 // export const metadata: Metadata = {

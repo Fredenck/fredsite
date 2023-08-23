@@ -38,7 +38,6 @@ const BlogPage = () => {
   const posts = allPosts.sort((a:Post, b:Post) => compareDesc(new Date(a.date), new Date(b.date)))
 
   // each post's category field: 'memories, all' 'all' 'thoughts, all' ...
-  // first attempt: const categories = posts.map((post, idx) => post.category.split(','))
   const categories = [...new Set(posts.flatMap(({ category }) => category.split(',')))].sort()
 
   return (
@@ -48,9 +47,7 @@ const BlogPage = () => {
       </div>
 
       <div>
-        {/* onClick() => change category state */}
         {categories.map((category, idx) => 
-        // <button className='p-2' key={idx} onClick={() => handleClick(posts, category)}>
         <button className='p-4' key={idx} onClick={() => setCategory(category)}>
           {category}
         </button>)
@@ -59,7 +56,6 @@ const BlogPage = () => {
 
       <div className=''>
         {posts.map((post, idx) => (
-          // post.category === 'all' && conditional rendering
           post.category.includes(category) && <PostCard key={idx} {...post} />
         ))}
       </div>

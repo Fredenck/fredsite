@@ -46,9 +46,6 @@ const mdxComponents: MDXComponents = {
     MyComponent: () => <div>Hello World!</div>,
   }
 
-// "code": "var Component=(()=>{var ur=Object.create;var I=Object.defineProperty;var 
-// lr=Object.getOwnPropertyDescriptor;var fr=Object.getOwnPropertyNames;var 
-// cr=Object.getPrototypeOf,dr=Object.prototype.hasOwnProperty;var G=(l,a)=>()=>(a||l((a={exports:..."
 export const Mdx = ({ code }: {code: string}) => {
   const Component = useMDXComponent(code)
 

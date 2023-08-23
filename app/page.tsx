@@ -24,12 +24,10 @@ const Home = () => {
         That's probably why I like computer science; it's applicable to anything</p>
       </div>
       
-      {/* <img src="/aloha.jpg" alt="My face" className="h-full rounded-lg" /> */}
       <Image
         alt="Aloha"
         className='rounded-lg object-scale-down pt-12 md:pt-0 lg:pt-0'
-        // Importing an image will
-        // automatically set the width and height
+        // Importing an image will automatically set the width and height
         src={pfp}
         // Make the image display full width
         style={{
@@ -39,12 +37,6 @@ const Home = () => {
         // Core Web Vitals: disable lazy loading for LCP
         priority={true}
       />
-
-      {/* <div className='flex flex-row justify-center'>
-          <img src="/snowy-view.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
-          <img src="/deer.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
-          <img src="/snowy.jpg" alt="alt" className='w-1/4 object-scale-down rounded-lg m-8'></img>
-      </div> */}
 
     </main>
   )
