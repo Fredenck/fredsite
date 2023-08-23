@@ -13,7 +13,7 @@ const Home = () => {
       <div className="w-full font-mono basis-2/6">
         <h1 className='text-lg font-bold'>Hey, it's Fred</h1>
         <br></br>
-        <p className='text-sm' font-bold>This is the fredsite</p>
+        <p className='text-sm'>This is the fredsite</p>
         <hr className="my-4 w-4/6" />
         <br></br>
         <p className='text-sm'>I'm a current UCLA sophomore studying computer science.</p>
