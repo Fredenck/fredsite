@@ -36,6 +36,8 @@ const Home = () => {
           height: '100%',
           width: 'auto',
         }}
+        // Core Web Vitals: disable lazy loading for LCP
+        priority={true}
       />
 
       {/* <div className='flex flex-row justify-center'>

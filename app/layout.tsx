@@ -16,7 +16,7 @@ const RootLayout = ({
   children: React.ReactNode
 }) => {
   return (
-    <html lang="en">
+    <html lang="en" className={inter.className}>
       <body className='bg-slate-50'>
         <Navbar/>
         {children}
