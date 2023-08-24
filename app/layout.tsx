@@ -18,6 +18,7 @@ const RootLayout = ({
 }) => {
   return (
     <html lang="en" className={inter.className}>
+      <meta name="google-site-verification" content="aLgGbe1NSIRALGjDoUqY5ZQLutGaTlmPZ-48x3YSp2o" />
       <body className='bg-slate-50'>
         <Navbar/>
         {children}
