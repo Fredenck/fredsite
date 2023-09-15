@@ -117,15 +117,15 @@ const ProjectPage = async() => {
             />
           <ProjectCard
             title={'Accelerating Machine Learning'} 
-            description={'Develop and test various approved US patentes under Khanh Nguyen.\
-            1) Tuning and Accelerating Machine Learning using Unmixed Second Order Derivatives:\
-            Created convolutional neural networks and applied a custom backpropogation method to \
-            accelerate convergence.\
-            2) Method and Apparatus for Controlling Robots Arms Using Elastic Distortion Simulations:\
-            customize U2D2 motors with machine learning to achieve inverse kinematics.'} 
+            description={'Develop and test Patent US-11745343-B2 under Khanh Nguyen.\
+            Created apparatus composed of 4 Dynamixel XL330-M288-T motors and 3 links capable of 360 rotation.\
+            Utilizing 2nd-order derivatives to adjust the learning rate, gradient descent is applied to the 4 motors\
+            achieving inverse kinematics through machine learning. The crux of this concept is\
+            the distortion function maintaining properties based on physics/linear algebra which\
+             drives backpropogation during gradient descent. Video and related documents coming soon'} 
             languages={['Pytorch', 'Machine Learning']} 
             img={petanano}
-            path={''}
+            path={'https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11745343'}
             />
           <ProjectCard
               title={'Analyzing SARS-CoV-2 Antbodies'} 
