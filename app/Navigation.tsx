@@ -17,11 +17,10 @@ export const Navbar = () => {
             <Image src={Popout} alt='popout' className='inline -translate-y-1.5 w-3 h-3'/>
             {/* <span className='material-symbols-outlined'>open_in_new</span> */}
           </Link>
-          <Link href={'https://medal.tv/u/nutsz'} className='mx-4'>
+          {/* <Link href={'https://medal.tv/u/nutsz'} className='mx-4'>
             Medal
-            {/* <sup></sup> */}
             <Image src={Popout} alt='popout' className='inline -translate-y-1.5 w-3 h-3'/>
-          </Link>
+          </Link> */}
       </nav>
     )
 }
