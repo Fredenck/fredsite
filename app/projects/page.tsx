@@ -27,7 +27,7 @@ type Project = {
 // inspired by https://www.geeksforgeeks.org/how-to-display-text-on-hover-over-image-using-tailwind-css-in-react-js/
 const ProjectCard = (project: Project) => {
   return (
-    <div className='shadow-lg p-6 rounded-xl'>
+    <div className='shadow-lg p-6 rounded-xl items-center content-center justify-center'>
         <div className="group relative block w-full bg-slate-200">
             <Image src={project.img} 
                 className="absolute object-cover w-full h-full rounded-lg group-hover:opacity-10" 
@@ -69,6 +69,18 @@ const ProjectPage = async() => {
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
         <ProjectCard
+            title={'Machine Learning on Inverse Kinematics'} 
+            description={'Develop and test Patent US-11745343-B2 under Khanh Nguyen.\
+            Created apparatus composed of 4 Dynamixel XL330-M288-T motors and 3 links capable of 360 rotation.\
+            Utilizing 2nd-order derivatives to adjust the learning rate, gradient descent is applied to the 4 motors\
+            achieving inverse kinematics through machine learning. The crux of this concept is\
+            the distortion function maintaining properties based on physics/linear algebra which\
+            drives backpropogation during gradient descent. See YouTube video for slides and more info!'} 
+            languages={['Pytorch', 'Gradient Descent']} 
+            img={petanano}
+            path={'https://youtu.be/1LLJDFr8fBI'}
+          />
+        <ProjectCard
             title={'Walk with Me: Computer Vision on the White Cane'} 
             description={'Utilizing computer vision on a white cane, \
             the user is notified of incoming obstacles from the \
@@ -106,27 +118,15 @@ const ProjectPage = async() => {
               img={wenyao}
               path={'https://github.com/Fredenck/IoT-Intern/tree/main#readme'}
             />
-          <ProjectCard
-              title={'Personal Website'} 
-              description={'Modern web-development with Next.js 13\'s App Router and TailwindCSS.\
-              Using Contentlayer ^0.3.4 (beta) to parse MDX and frontmatter (YAML) into JSON during build time\
-              yielding statically generated pages with dynamic routes.'} 
-              languages={['Next.js 13', 'Tailwind', 'Contentlayer']} 
-              img={website}
-              path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
-            />
-          <ProjectCard
-            title={'Accelerating Machine Learning'} 
-            description={'Develop and test Patent US-11745343-B2 under Khanh Nguyen.\
-            Created apparatus composed of 4 Dynamixel XL330-M288-T motors and 3 links capable of 360 rotation.\
-            Utilizing 2nd-order derivatives to adjust the learning rate, gradient descent is applied to the 4 motors\
-            achieving inverse kinematics through machine learning. The crux of this concept is\
-            the distortion function maintaining properties based on physics/linear algebra which\
-             drives backpropogation during gradient descent. Video and related documents coming soon'} 
-            languages={['Pytorch', 'Machine Learning']} 
-            img={petanano}
-            path={'https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11745343'}
-            />
+            <ProjectCard
+                title={'Personal Website'} 
+                description={'Modern web-development with Next.js 13\'s App Router and TailwindCSS.\
+                Using Contentlayer ^0.3.4 (beta) to parse MDX and frontmatter (YAML) into JSON during build time\
+                yielding statically generated pages with dynamic routes.'} 
+                languages={['Next.js 13', 'Tailwind', 'Contentlayer']} 
+                img={website}
+                path={'https://github.com/Fredenck/Escape-the-Volcano#readme'}
+              />
           <ProjectCard
               title={'Analyzing SARS-CoV-2 Antbodies'} 
               description={'In the Coronavirus Visualization Team under Harvard\'s Erevna Program, \
