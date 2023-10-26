@@ -33,7 +33,7 @@ const PostCard = (post: Post) => {
 
 // 08/22: to store posts in a state as a client component and remove async
 const BlogPage = () => {
-  const [category, setCategory] = useState('all')
+  const [curCategory, setCategory] = useState('all')
 
   const posts = allPosts.sort((a:Post, b:Post) => compareDesc(new Date(a.date), new Date(b.date)))
 
@@ -42,22 +42,30 @@ const BlogPage = () => {
 
   return (
     <div className="py-8 px-16 md:px-48 lg:px-96 font-sans">
-      <div className="mb-4">
-        <h1 className='text-2xl font-bold'>Blog</h1>
+      <div className="px-4">
+        <h1 className='pb-2 text-2xl font-bold'>Blog</h1>
+        <p>An attempt to transcribe my jumble of thoughts.</p>
+        <p>Horrible writing, but I'm working on it~</p>
       </div>
 
       <div>
-        {categories.map((category, idx) => 
-        <button className='p-4' key={idx} onClick={() => setCategory(category)}>
+        {/* background shading: bg-slate-200/50 */}
+        <p className='pl-4 inline'>Filters: </p>
+        {categories.map((category, idx) => (
+        category.includes(curCategory) ?
+        <button className='my-4 mx-2 px-2 rounded-lg font-bold ' key={idx} onClick={() => setCategory(category)}>
           {category}
-        </button>)
-        }
+        </button> : 
+        <button className='my-4 mx-2 px-2 rounded-lg' key={idx} onClick={() => setCategory(category)}>
+        {category}
+        </button>
+        ))}
       </div>
 
       <div className=''>
-        {posts.map((post, idx) => (
-          post.category.includes(category) && <PostCard key={idx} {...post} />
-        ))}
+        {posts.map((post, idx) => 
+          post.category.includes(curCategory) && <PostCard key={idx} {...post} />
+        )}
       </div>
     </div>
   )
