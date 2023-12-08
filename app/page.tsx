@@ -18,10 +18,10 @@ const Home = () => {
         <br></br>
         <p className='text-sm'>I'm a current UCLA sophomore studying computer science.</p>
         <br></br>
-        <p className='text-sm'>I see programming as a tool and computer science as the area of study to solve problems with this tool.</p>
-        <br></br>
         <p className='text-sm'>Currently, I have a lot of interests. Probably too many. 
         That's probably why I like computer science; it's applicable to anything</p>
+        <br></br>
+        <p className='text-sm'>You can probably catch me playing volleyball at open gym or fencing practice this quarter!</p>
       </div>
       
       <Image
