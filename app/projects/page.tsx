@@ -62,7 +62,8 @@ const ProjectCard = (project: Project) => {
 
 const ProjectPage = async() => {
   return (
-    <div className="py-8 px-4 md:px-24 lg:px-36 font-sans">
+    <div className="py-8 flex justify-center">
+      <div className='w-10/12'>
       <div className="text-center ">
         <h1 className='text-2xl font-bold'>Projects</h1>
         <p>Random stuff I've done; hover for some details!</p>
@@ -148,6 +149,7 @@ const ProjectPage = async() => {
             />
 
       </div>
+    </div>
     </div>
   )
 }

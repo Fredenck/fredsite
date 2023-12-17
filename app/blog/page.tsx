@@ -41,30 +41,32 @@ const BlogPage = () => {
   const categories = [...new Set(posts.flatMap(({ category }) => category.split(',')))].sort()
 
   return (
-    <div className="py-8 px-16 md:px-48 lg:px-96">
-      <div className="px-4">
-        <h1 className='pb-2 text-2xl font-bold'>Blog</h1>
-        <p>An attempt to transcribe my jumble of thoughts.</p>
-        <p>Horrible writing, but I'm working on it~</p>
-      </div>
+    <div className="py-8 flex justify-center">
+      <div className='w-5/12'>
+        <div className="px-4">
+          <h1 className='pb-2 text-2xl font-bold'>Blog</h1>
+          <p>An attempt to transcribe my jumble of thoughts.</p>
+          <p>Horrible writing, but I'm working on it~</p>
+        </div>
 
-      <div>
-        <p className='pl-4 inline'>Filters: </p>
-        {categories.map((category, idx) => (
-        category.includes(curCategory) ?
-        <button className='my-4 mx-2 px-2 rounded-lg font-bold ' key={idx} onClick={() => setCategory(category)}>
+        <div>
+          <p className='pl-4 inline'>Filters: </p>
+          {categories.map((category, idx) => (
+          category.includes(curCategory) ?
+          <button className='my-4 mx-2 px-2 rounded-lg font-bold ' key={idx} onClick={() => setCategory(category)}>
+            {category}
+          </button> : 
+          <button className='my-4 mx-2 px-2 rounded-lg' key={idx} onClick={() => setCategory(category)}>
           {category}
-        </button> : 
-        <button className='my-4 mx-2 px-2 rounded-lg' key={idx} onClick={() => setCategory(category)}>
-        {category}
-        </button>
-        ))}
-      </div>
+          </button>
+          ))}
+        </div>
 
-      <div className=''>
-        {posts.map((post, idx) => 
-          post.category.includes(curCategory) && <PostCard key={idx} {...post} />
-        )}
+        <div className=''>
+          {posts.map((post, idx) => 
+            post.category.includes(curCategory) && <PostCard key={idx} {...post} />
+          )}
+        </div>
       </div>
     </div>
   )
