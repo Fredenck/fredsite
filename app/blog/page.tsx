@@ -42,22 +42,18 @@ const BlogPage = () => {
 
   return (
     <div className="py-8 flex justify-center">
-      <div className='w-5/12'>
+      <div className='w-11/12 lg:w-5/12'>
         <div className="px-4">
           <h1 className='pb-2 text-2xl font-bold'>Blog</h1>
-          <p>An attempt to transcribe my jumble of thoughts.</p>
+          <p>Trying to transcribe my jumble of thoughts.</p>
           <p>Horrible writing, but I'm working on it~</p>
         </div>
 
         <div>
           <p className='pl-4 inline'>Filters: </p>
           {categories.map((category, idx) => (
-          category.includes(curCategory) ?
-          <button className='my-4 mx-2 px-2 rounded-lg font-bold ' key={idx} onClick={() => setCategory(category)}>
+          <button className={`my-4 mx-1 px-1 lg:mx-2 lg:px-2 rounded-lg ${category.includes(curCategory) ? 'font-bold' : ''}`} key={idx} onClick={() => setCategory(category)}>
             {category}
-          </button> : 
-          <button className='my-4 mx-2 px-2 rounded-lg' key={idx} onClick={() => setCategory(category)}>
-          {category}
           </button>
           ))}
         </div>
