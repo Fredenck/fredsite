@@ -50,7 +50,7 @@ export const Mdx = ({ code }: {code: string}) => {
   const Component = useMDXComponent(code)
 
   return (
-    <article className= 'prose prose-slate max-w-none'>
+    <article className= 'prose max-w-none'>
         <Component components={mdxComponents} />
     </article>
   )

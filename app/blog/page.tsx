@@ -41,7 +41,7 @@ const BlogPage = () => {
   const categories = [...new Set(posts.flatMap(({ category }) => category.split(',')))].sort()
 
   return (
-    <div className="py-8 px-16 md:px-48 lg:px-96 font-sans">
+    <div className="py-8 px-16 md:px-48 lg:px-96">
       <div className="px-4">
         <h1 className='pb-2 text-2xl font-bold'>Blog</h1>
         <p>An attempt to transcribe my jumble of thoughts.</p>
@@ -49,7 +49,6 @@ const BlogPage = () => {
       </div>
 
       <div>
-        {/* background shading: bg-slate-200/50 */}
         <p className='pl-4 inline'>Filters: </p>
         {categories.map((category, idx) => (
         category.includes(curCategory) ?

@@ -36,22 +36,18 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   if (!post) notFound()
 
   return (
-    <article className="px-12 md:px-36 lg:px-72 pt-8 pb-24">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold">{post.title}</h1>
-        <time dateTime={post.date} className="text-xs mb-1 text-gray-600">
-          {format(parseISO(post.date), 'LLLL d, yyyy')}
-        </time>
-        {post.description && (
-          <p className="text-xs">
-            {post.description}
-          </p>
-        )}
-        <hr className="my-4" />
-      </div>
-      <div className='font-serif text-base'>
-        <Mdx code={post.body.code} ></Mdx>
-      </div>
+    <article className="px-12 py-8 md:px-48 lg:px-96">
+      <h1 className="text-3xl font-bold">{post.title}</h1>
+      <time dateTime={post.date} className="text-xs mb-1 text-gray-600">
+        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      </time>
+      {post.description && (
+        <p className="text-s">
+          {post.description}
+        </p>
+      )}
+      <hr className="my-4" />
+      <Mdx code={post.body.code} ></Mdx>
     </article>
   )
 }
