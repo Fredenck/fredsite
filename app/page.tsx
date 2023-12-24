@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
-import pfp from '../public/aloha.jpg' 
+// import pfp from '../public/aloha.jpg' 
+import pfp from '../public/homepage.jpg'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
