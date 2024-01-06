@@ -5,35 +5,40 @@ description: How this came to be
 category: all
 ---
 
-I was always interested in my life's notable events, 'canon' events per se. 
-I first used Instagram to loosely keep track of such events; however, I didn't care if my followers saw them.
+I always thought to myself if I were to have a Wikipedia page, what would be on it?
+I first used Instagram to loosely keep track of such events but it's not built for writing (caption word limit)
+and I didn't always have corresponding pictures.
+I also felt self-conscious which is a bit contradictory to what this site is
+but I think there is a difference.
 
-I like pictures, especially the good ones. 
-My recent trip in Europe contains so many memories and pictures that I want to record.
+Words are powerful. They create connections.
+[Justin Jackson](https://justinjackson.ca/words.html) describes it really well.
 
+I wanted somewhere to share my thoughts, to write.
+I change a lot, yet I don't really change.
+Around high school, I would look back at Fred from a year ago and be in awe at how much I changed.
+Every year, every day, every second I change;
+for the better and the worse, but on average for the better.
 
-Another aspect is to share my thoughts, to write. 
-I change a lot, yet I don't really change. I think it was around high school when I would look back at myself and just be in awe at how much I changed.
-Every year, every day, every second I change for the better or the worse, but overall for the better.
-Meeting new people and experiencing new things are key to change.
-Documenting this change to record how I felt at that point of my life is a perfect way to encode this information. 
-The reason I chose to pursue a blog is because I believe that words are powerful.
-If I were to vlog, I would worry about not being able to express what I intend to express.
-Instead, I prefer having my thoughts settle down before being transcribed here. Plus, I believe that blogging is easier to maintain!
+Meeting new people and experiencing new things drive change.
+Documenting my thoughts as I live life is a perfect way to encode this information. 
 
+I also considered vlogging. It'd be a great way to gather all my pictures but harder to express all of my feelings.
+Plus, I believe blogging is easier to maintain!
+I used to jot some thoughts on the Notes app but they became too long and disorganized hence the transition to this.
 
-I previously jotted down my thoughts on my phone's Notes app, but they became a little too long and disorganized. 
-Thus, I'll slowly transition them to here!
-
-Functionality-wise, I was inspired by [Lee Robinson](https://leerob.io/) and my classmate [Michael Lan](https://mzchael.com/).
+Functional inpsiration from [Lee Robinson](https://leerob.io/) and [Michael Lan](https://mzchael.com/).
+They have a really nice lightweight site with Next, which is why I chose Next as well.
+There doesn't have to be fancy flares and transitions for a simple blog because words are powerful.
 
 I used Next.js 13's App Router system along with TailwindCSS for styling. 
 For middleware, contentlayer proved to be super helpful in rendering and parsing metadata from my mdx posts.
+It's still in beta so working with it has been kind of a pain but a valuable experience nonetheless.
 
-A nasty problem I was caught in was **dependency hell**. I spent about hours learning Nextjs, setting up the website, and resolving dependency/build bugs through 50 bajillion online resources.
+A nasty problem I was caught in was **dependency hell**.
+I spent about hours learning Nextjs, setting up the website, 
+and resolving dependency/build bugs through 50 bajillion online resources.
 I was even considering switching to Astro but ultimately resolved my problems through downgrading contentlayer to 0.3.1 and adding overrides for @opentelemetry as seen by a 
-[GitHub issue](https://github.com/contentlayerdev/contentlayer/issues/506#issuecomment-1625210487) created literally a week ago.
+[GitHub issue](https://github.com/contentlayerdev/contentlayer/issues/506#issuecomment-1625210487) created literally a week ago (as of writing).
 
 Currently, the blog seems to be working, which is wonderful :).
-
-I do plan to add a few professional features such as a resume and project portfolio tab, but those should be theoretically simple and just a link to other sites.
