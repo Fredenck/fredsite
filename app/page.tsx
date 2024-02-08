@@ -20,10 +20,10 @@ const Home = () => {
         <hr className="my-4 w-4/6" />
         <p className='text-sm'>I made this website with Next 13, Tailwind, and Contentlayer.</p>
         <br></br>
-        <p className='text-sm'>I love trying new things! Last quarter I tried our Fencing and Volleyball! This quarter, I plan to continue fencing and get back into Tennis</p>
+        <p className='text-sm'>I love trying new things! Last quarter I tried our Fencing and Volleyball! This quarter, I plan to continue fencing and get back into Tennis.</p>
         
         <br></br>
-        <p className='text-sm'>I also love Computer Science :). It's applicable everywhere and really gives a unique perspective on how you <em>think</em></p>
+        <p className='text-sm'>I also love Computer Science :). I love creating and understanding what I'm creating; plus, it really changes the way you <em>think</em>.</p>
       </div>
       
       <Image
