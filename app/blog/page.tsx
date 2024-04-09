@@ -45,8 +45,9 @@ const BlogPage = () => {
       <div className='w-11/12 lg:w-5/12'>
         <div className="px-4">
           <h1 className='pb-2 text-2xl font-bold'>Blog</h1>
-          <p>Trying to transcribe my jumble of thoughts.</p>
-          <p>Horrible writing, but I'm working on it~</p>
+          <p>Trying to transcribe my jumble of thoughts. I have 50+ more bullet points I want to talk about; hopefully they can be combined so I can write about them...</p>
+          <br/>
+          <p>I still want to revise and rewrite a lot of these, but I'll never be satisfied so here they are:</p>
         </div>
 
         <div>
