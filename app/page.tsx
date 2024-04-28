@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 // import pfp from '../public/aloha.jpg' 
-import pfp from '../public/homepage.jpg'
+import pfp from '../public/homepage2.jpg'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ const Home = () => {
     // p-24, h-[...] because h-screen conflcits with navbar height and leads to whitespace at the bottom
     <main className="flex flex-col lg:flex-row lg:justify-around h-[calc(100vh-64px)] p-12 lg:p-24">
       <div className="w-11/12 lg:w-5/12">
-        <h1 className='text-lg font-bold'>Hey, it's Fred</h1>
+        <h1 className='text-lg font-bold'>I'm Fred</h1>
         <br></br>
         <p>Welcome!</p>
         <br></br>
@@ -20,10 +20,7 @@ const Home = () => {
         <hr className="my-4 w-4/6" />
         <p className='text-sm'>I made this website with Next 13, Tailwind, and Contentlayer.</p>
         <br></br>
-        <p className='text-sm'>I love trying new things! Last quarter I tried our Fencing and Volleyball! This quarter, I plan to continue fencing and get back into Tennis.</p>
-        
-        <br></br>
-        <p className='text-sm'>I also love Computer Science :). I love creating and understanding what I'm creating; plus, it really changes the way you <em>think</em>.</p>
+        <p className='text-sm'>I love trying new things! Life is all about experiences and I try to gather all that I can.</p>
       </div>
       
       <Image
