@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 // import pfp from '../public/aloha.jpg' 
-import pfp from '../public/homepage2.jpg'
+import pfp from '../public/homepage3.jpg'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 const Home = () => {
   return (
     // p-24, h-[...] because h-screen conflcits with navbar height and leads to whitespace at the bottom
-    <main className="flex flex-col lg:flex-row lg:justify-around h-[calc(100vh-64px)] p-12 lg:p-24">
+    <main className="flex flex-col lg:flex-row lg:justify-around h-[calc(100vh-64px)] p-12 lg:py-24 lg:px-36">
       <div className="w-11/12 lg:w-5/12">
         <h1 className='text-lg font-bold'>I'm Fred</h1>
         <br></br>
-        <p>Welcome!</p>
+        <p>Heyyyyy</p>
         <br></br>
         <p className='text-sm'>This is a mix of cool projects I've done as well as a journal for me. Perhaps I'll separate these as professional/personal in the future.</p>
         <hr className="my-4 w-4/6" />
