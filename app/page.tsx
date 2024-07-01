@@ -23,19 +23,22 @@ const Home = () => {
         <p className='text-sm'>I love trying new things! Life is all about experiences and I try to gather all that I can.</p>
       </div>
       
-      <Image
-        alt="Aloha"
-        className='rounded-lg object-scale-down pt-12 lg:pt-0'
-        // Importing an image will automatically set the width and height
-        src={pfp}
-        // Make the image display full width
-        style={{
-          height: '100%',
-          width: 'auto',
-        }}
-        // Core Web Vitals: disable lazy loading for LCP
-        priority={true}
-      />
+      <div className='flex-col'>
+        <Image
+          alt="mirror selfie on my 20th bday"
+          className='rounded-lg object-scale-down pt-12 lg:pt-0'
+          // Importing an image will automatically set the width and height
+          src={pfp}
+          // Make the image display full width
+          style={{
+            height: '100%',
+            width: 'auto',
+          }}
+          // Core Web Vitals: disable lazy loading for LCP
+          priority={true}
+        />
+        <p className='text-sm text-center mt-4'>me on my 20th birthday &gt;:)</p>
+      </div>
 
     </main>
   )
