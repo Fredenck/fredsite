@@ -27,7 +27,9 @@ export const generateStaticParams = async () => allPosts.map((post) => ({ slug: 
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug)
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
+  // throwing Error is for error.js; we can just use notFound here
+  // if (!post) throw new Error(`Post not found for slug: ${params.slug}`)
+  if (!post) notFound()
   return { title: post.title, description: post.description, date: post.date}
 }
 
