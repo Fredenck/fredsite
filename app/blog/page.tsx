@@ -24,7 +24,7 @@ const PostCard = (post: Post) => {
         <time dateTime={post.date} className="mb-2 block text-xs text-slate-500">
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
-        <p className='text-sm text-slate-500'>{post.description}</p>
+        <p className='text-sm text-slate-500 italic'>{post.description}</p>
         {/* <div className="text-sm" dangerouslySetInnerHTML={{ __html: post.description}} /> */}
       </Link>
     </div>
