@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 // import pfp from '../public/aloha.jpg' 
-import pfp from '../public/homepage3.jpg'
+import pfp from '../public/homepage4.jpg'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ const Home = () => {
           // Core Web Vitals: disable lazy loading for LCP
           priority={true}
         />
-        <p className='text-sm text-center mt-4'>me on my 20th birthday &gt;:)</p>
+        {/* <p className='text-sm text-center mt-4'>me on my 20th birthday &gt;:)</p> */}
       </div>
 
     </main>
